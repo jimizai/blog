@@ -7,7 +7,6 @@ export const environment = {
     username: 'root',
     password: '123456',
     database: 'blog',
-    entities: [],
     synchronize: false,
   },
 };
