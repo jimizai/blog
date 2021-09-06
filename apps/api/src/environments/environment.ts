@@ -9,6 +9,10 @@ export const environment = {
     database: 'blog',
     synchronize: false,
   },
+  jwt: {
+    secret: 'hellosecret',
+    expiresIn: '60s',
+  },
 };
 
 export type Env = typeof environment;
