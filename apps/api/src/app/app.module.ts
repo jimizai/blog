@@ -9,6 +9,8 @@ import { BlogsService } from './modules/blogs/blogs.service';
 import { getEnv } from '../environments';
 import { entities } from './app.entity';
 import { AuthModule } from './auth/auth.module';
+import { TagsController } from './modules/tags/tags.controller';
+import { TagsService } from './modules/tags/tags.service';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forFeature(entities),
     AuthModule,
   ],
-  controllers: [AppController, HomeController, BlogsController],
-  providers: [AppService, BlogsService],
+  controllers: [AppController, HomeController, BlogsController, TagsController],
+  providers: [AppService, BlogsService, TagsService],
 })
 export class AppModule {}
